@@ -1,10 +1,10 @@
 "use client";
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import styles from "../styles/layout.module.css";
+import styles from '../styles/layout.module.css';
 
 export const Nav = () => {
   const pathname = usePathname();
@@ -32,6 +32,14 @@ export const Nav = () => {
         href="/quotes"
       >
         Quotes
+      </Link>
+      <Link
+        className={`${styles.link} ${
+          pathname === "/todo" ? styles.active : ""
+        }`}
+        href="/todo"
+      >
+        Todo
       </Link>
     </nav>
   );

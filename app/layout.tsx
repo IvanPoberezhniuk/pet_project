@@ -6,8 +6,6 @@ import '@fontsource/roboto/700.css';
 
 import type { ReactNode } from 'react';
 
-import Image from 'next/image';
-
 import { Nav } from './components/Nav';
 import { StoreProvider } from './StoreProvider';
 import styles from './styles/layout.module.css';
@@ -32,13 +30,7 @@ export default function RootLayout({ children }: Props) {
         <body>
           <section className={styles.container}>
             <Nav />
-
-            <header className={styles.header}>
-              <Image src="/logo.svg" width='100' height='100' className={styles.logo} alt="logo" />
-            </header>
-
             <main className={styles.main}>{children}</main>
-
             <footer className={styles.footer}>
               <span>Learn </span>
               <a
